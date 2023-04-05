@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Suma de edades</title>
+    <h1>Programa para sumar edades</h1>
+</head>
+<body>
+    <script>
+        document.write('La suma de las edades Juan, Cristian y Pedro es: ...<br>');
+        document.write((20+12+35) + ' años');
+        
+        let anio = 2023;
+
+        document.write('<br>');
+        document.write('<br> Juan tiene ' + (anio - 2012) + ' años');
+        document.write('<br>');
+        document.write('<br> Juan tiene ' + (anio - 1988) + ' años');
+        document.write('<br>');
+        document.write('<br> Juan tiene ' + (anio - 1679) + ' años');
+        document.write('<br>');
+        document.write('<br>');
+        
+        anio = 2028;
+        
+        document.write('<hr>');
+        document.write('<br> Ana tiene ' + (anio - 2020) + ' años');
+        document.write('<br>');
+        document.write('<br> David tiene ' + (anio - 1820) + ' años');
+        document.write('<br>');
+        document.write('<br> Jairo tiene ' + (anio - 1952) + ' años');
+        document.write('<br>');
+        document.write('<br>');
+
+        let edadAna = 8;
+        let edadDavid = 208;
+        let edadJairo = 76;
+
+        let n1 = "Ana";
+        let n2 = "David";
+        let n3 = "Jairo";
+
+        let promedio = (edadAna+edadDavid+edadJairo)/3;
+
+        document.write('El promedio de edad de ' + n1 + ', ' + n2 + ' y ' + n3 + ' es: ' + Math.round(promedio));
+    </script>
+</body>
+</html>
