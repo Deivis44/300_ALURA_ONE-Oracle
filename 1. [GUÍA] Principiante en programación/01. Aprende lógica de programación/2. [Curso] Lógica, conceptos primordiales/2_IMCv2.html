@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <h1>Calcular IMC</h1>
+
+    <script>
+        function saltarLinea() {
+            document.write("<br><br>");
+        }
+
+        function calcularIMC(peso, altura) {
+            return (peso / (altura*altura)); // dejo de usar 'let' para una función porque solo se usa ahí
+        }
+
+        let nombre = prompt("Cual es su nombre?");
+        let peso = prompt(nombre + ", informe su peso: ");
+        let altura = prompt(nombre + ", informe su altura: ");
+
+        let imcTotal = calcularIMC(peso, altura);
+
+        document.write("El IMC calculado para el usuario " + nombre + " es de: " + imcTotal);
+
+        saltarLinea();
+        if (imcTotal < 18.5) {
+            document.write("Está por debajo de lo recomendado");
+        } else if (imcTotal >= 18.5 && imcTotal < 24.9) {
+            document.write("Está en el intervalo normal");
+        } else if (imcTotal > 25 && imcTotal < 29.9) {
+            document.write("Está en el intervalo de sobrepeso");
+        } else {
+            document.write("Está en el la etapa de preobesidad");
+        }
+
+    </script>
+</body>
+</html>

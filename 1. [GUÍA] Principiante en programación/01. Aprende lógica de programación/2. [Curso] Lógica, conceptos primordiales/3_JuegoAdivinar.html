@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivinar</title>
+</head>
+<body>
+    <h1>Adivina el numero</h1>
+    
+    <script>
+        function saltarLinea() {
+            document.write("<br><br>");
+        }
+
+        let nPensado = Math.round(Math.random() * 10); 
+        let nLanzado = 0;
+        
+        while (nLanzado != nPensado) {
+            nLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"))
+            
+            if (nPensado == nLanzado) {
+                document.write("Felicidades! acertaste el número: " + nLanzado);
+                saltarLinea();
+            } else {
+                document.write("Nel! " + nLanzado + " no es el número");
+                saltarLinea();
+            }
+        }
+            
+    </script>
+</body>
+</html>
