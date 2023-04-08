@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivina el numero v2</title>
+</head>
+<body>
+    <h1>Juego, adivina el número</h1>
+
+    <script>
+
+        function saltarLinea(cantidad) {
+            switch (cantidad) {
+                case 1:
+                    document.write("<br>");
+                    break;
+                case 2:
+                    document.write("<br><br>");
+                    break;
+            }
+        }
+
+        let numeroPensado = Math.round(Math.random() * 10);
+        let intentos = 5;
+        let cMamo;
+        alert("Tienes: " + intentos + " intentos");
+        
+        for (let i = 1; i <= intentos; i++) {
+            document.write("Intento # " + i);
+            document.write("<br>");
+            let numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"));
+            
+            if (numeroPensado == numeroLanzado) {
+                document.write("Felicidades! acertaste el número. GANASTE");
+                saltarLinea(2);
+                cMamo = false;
+                break;
+            } else {
+                document.write("Lastimosamente ese no es el número");
+                saltarLinea(1);
+                document.write("El número pensado era: " + numeroPensado);
+                saltarLinea(2);
+                cMamo = true;
+            }
+        }
+        
+        if (cMamo == true) {
+            alert("Re malo que sos. PERDISTE");
+        }
+
+    </script>
+
+    <h3>FIN.</h3>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AÑOS MUNDIAL DE LA FIFA</title>
+</head>
+<body>
+    <h1>Años del mundial</h1>
+
+    <script>
+        function saltarLinea() {
+            document.write("<br><br>");
+        }
+
+        let anioMundialInicial = 1930;
+        let anioMundialFinal = parseInt(prompt("Ingrese el año limite para calcular"));
+
+        alert("Hubo un mundial de la FIFA en el año: " + anioMundialInicial);
+        
+        while (anioMundialInicial < anioMundialFinal) {
+            document.write("Hubo un mundial de la FIFA en el año: " + anioMundialInicial);
+            anioMundialInicial = anioMundialInicial + 4;
+            saltarLinea();
+        }
+        
+        saltarLinea();
+        document.write("FIN");
+
+    </script>    
+</body>
+</html>
