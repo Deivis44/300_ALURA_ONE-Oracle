@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receta</title>
+</head>
+<body>
+    <h1>Agregar ingredientes a una receta</h1>
+
+    <script>
+
+        let ingredientes = [];
+        let cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+
+        for (let posicion = 0; posicion < cantidad; posicion++) {
+            let elemento = prompt("Informe el ingrediente # " + (posicion + 1));
+            let repetido = false;
+            
+            for (let i = 0; i < ingredientes.length; i++) {
+                if (ingredientes[i] == elemento) {
+                    repetido = true;
+                    alert("Este elemento ya está en el array");
+                    break;
+                }
+            }
+            if (repetido == false) {
+                ingredientes.push(elemento);
+            }
+        }        
+        
+        document.write("Estos son los elementos de la receta: <br><br>");
+        for (let i = 0; i < ingredientes.length; i++) {
+            document.write("- " + ingredientes[i] + "<br>");
+        }
+    
+
+    </script>
+
+    <h3>FIN.</h3>
+</body>
+</html>
