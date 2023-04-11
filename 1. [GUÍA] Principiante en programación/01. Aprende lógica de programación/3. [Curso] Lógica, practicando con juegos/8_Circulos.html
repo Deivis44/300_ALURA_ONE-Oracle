@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CLICK</title>
+</head>
+<body>
+    <h1>Responde cuando da click</h1>
+    <canvas width="600px" height="400px"></canvas>
+
+    <script>
+
+        let pantalla = document.querySelector("canvas");
+        let pincel = pantalla.getContext("2d");
+        
+        pincel.fillStyle  = "lightgrey";
+        pincel.fillRect(0,0,600,400);
+
+        function dibujarCirculo(x,y,radio) {
+            pincel.fillStyle = "blue";
+            pincel.beginPath();
+            pincel.arc(x,y,radio,0,(2*Math.PI));
+            pincel.fill();
+        }
+
+        function limpiarPantalla() {
+            pincel.clearRect(0,0,600,400);
+        }
+
+        let x = 20;
+        let sentido = 1;
+        function actualizarPantalla() {
+            
+            limpiarPantalla();
+            if (x > 580) {
+                sentido = -1;
+            } else if (x < 20) {
+                sentido = 1;
+            }
+            dibujarCirculo(x,20,10);
+            x = x + sentido;
+            
+        }
+
+        setInterval(actualizarPantalla,5);
+
+    </script>
+    
+    <h3>FIN.</h3>
+</body>
+</html>

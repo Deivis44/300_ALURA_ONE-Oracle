@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego final</title>
+</head>
+<body>
+    <h1>Tiro al blanco</h1>
+    <canvas width="600px" height="400px"></canvas>
+
+    <script>
+
+        let pantalla = document.querySelector("canvas");
+        let pincel = pantalla.getContext("2d");
+
+        let randomX;
+        let randomY;
+        
+        pincel.fillStyle  = "lightgrey";
+        pincel.fillRect(0,0,600,400);
+
+        function dibujarCirculo(x,y,radio,color) {
+            pincel.fillStyle = color;
+            pincel.beginPath();
+            pincel.arc(x,y,radio,0,(2*Math.PI));
+            pincel.fill();
+        }
+
+        function limpiarPantalla() {
+            pincel.clearRect(0,0,600,400);
+        }
+
+        let x = 20;
+        let sentido = 1;
+        function actualizarPantalla() {
+            limpiarPantalla();
+            randomX = NumRandom(550);
+            randomY = NumRandom(350);
+            diseñarDiana(randomX,randomY);
+            x++;            
+        }
+        
+        function NumRandom(max) {
+            return Math.round(Math.random() * max) + 20;
+        }
+        
+        let radio =  10;
+        function diseñarDiana(x,y) {
+            dibujarCirculo(x,y,radio+20,"red");
+            dibujarCirculo(x,y,radio+10,"lightgray");
+            dibujarCirculo(x,y,radio,"red");
+        }
+
+        let paso = false;
+        function disparar (evento) {
+            let x = evento.pageX - pantalla.offsetLeft;
+            let y = evento.pageY - pantalla.offsetTop;
+
+            if (x < randomX + radio && x > randomX - radio && y < randomY + radio && y > randomY - radio) {
+                alert("TIRO AL BLANCO!");
+                paso = true;
+            }
+        }
+
+        setInterval(actualizarPantalla,500);
+        pantalla.onclick = disparar;
+
+    </script>
+    
+    <h3>FIN.</h3>
+</body>
+</html>

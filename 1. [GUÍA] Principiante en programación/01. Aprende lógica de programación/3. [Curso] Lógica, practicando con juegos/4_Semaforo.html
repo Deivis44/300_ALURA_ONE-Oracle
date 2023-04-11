@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dibujando</title>
+</head>
+<body>
+    <h1>Haciendo un semaforo</h1>
+
+    <canvas width="600px" height="400px"></canvas>
+
+    <script>
+        function dibujarCuadrado (color,posX,posY) {
+            let pantalla = document.querySelector("canvas");
+            let pincel = pantalla.getContext("2d");
+            
+            pincel.fillStyle  = color;
+            pincel.fillRect(posX,posY,50,50);
+            pincel.strokeStyle = "black";
+            pincel.strokeRect(posX,posY,50,50);
+        }
+
+        let contador = 0;
+        while (contador < 600) {
+            dibujarCuadrado("green",contador,0);
+            dibujarCuadrado("yellow",contador,50);
+            dibujarCuadrado("red",contador,100);
+            contador = contador + 50;
+        }
+
+
+        </script>
+
+    <h3>FIN.</h3>
+</body>
+</html>

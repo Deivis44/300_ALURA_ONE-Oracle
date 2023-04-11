@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CLICK</title>
+</head>
+<body>
+    <h1>Responde cuando da click</h1>
+    <canvas width="600px" height="400px"></canvas>
+
+    <script>
+
+        let pantalla = document.querySelector("canvas");
+        let pincel = pantalla.getContext("2d");
+        
+        pincel.fillStyle  = "lightgrey";
+        pincel.fillRect(0,0,600,400);
+
+        let colores = ["blue", "green", "red"];
+        contador = 0; // empieza con azul
+
+        function daClick(evento) {
+            let x = evento.pageX - pantalla.offsetLeft;
+            let y = evento.pageY - pantalla.offsetTop;
+            console.log(evento);
+            
+            alert("(" + x + ", " +  y + ")");
+        }
+        
+        function dibujarCirculo(evento) {
+            let x = evento.pageX - pantalla.offsetLeft;
+            let y = evento.pageY - pantalla.offsetTop;
+
+            pincel.fillStyle = colores[contador];
+            pincel.beginPath();
+            pincel.arc(x,y,10,0,(2*3.14));
+            pincel.fill();
+            console.log("(" + x + ", " +  y + ")");
+
+        }
+
+        // pantalla.onclick = daClick;
+        pantalla.onclick = dibujarCirculo;
+
+        function alterarColor() {
+            contador++;
+            if (contador >= colores.length) {
+                contador = 0;
+            }
+
+            switch (contador) {
+                case 0:
+                    alert("Cambio a color: " + (contador+1) + " = AZUL");
+                    break;
+                case 1:
+                    alert("Cambio a color: " + (contador+1) + " = VERDE");
+                    break;
+                case 2:
+                    alert("Cambio a color: " + (contador+1) + " = ROJO");
+                    break;
+            }
+
+            return false;
+        }
+
+        pantalla.oncontextmenu = alterarColor;
+
+    </script>
+    
+    <h3>FIN.</h3>
+</body>
+</html>
