@@ -1,0 +1,126 @@
+header {
+    background-color: #BBBBBB;
+    padding: 20px;
+}
+
+.caja {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #b2ecfa;
+}
+
+p {
+    font-family: 'Gurajada', serif;
+    font-size: 20px;
+}
+
+.productos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 3px solid #000000;
+    /* border-color: #000000;
+    border-width: 2px;
+    border-style: solid; */
+    border-radius: 15px;
+}
+
+.productos li:hover {
+    border-color: #98def0;
+}
+
+.productos li:hover h2 {
+    font-size: 30px;
+}
+
+.productos li:active {
+    border-color: #0b31af;
+}
+
+.productos h2 {
+    font-size: 20px;
+    font-family: 'Days One', sans-serif;
+}
+
+.p-descripcion {
+    font-size: 24px;
+}
+
+.p-precio {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    background: url(images/Productos/bg.jpg);
+    padding: 50px;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 20px;
+}
+
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form p{
+    display: block;
+    font-size: 26px;
+    margin: 0 0 10px;
+    font-family: 'Gurajada', serif;
+}
+
+.input-padron {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0px;
+}

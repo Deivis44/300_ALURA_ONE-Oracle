@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contactos</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Gurajada&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="images/Productos/logo.png" alt="logo-barberia"></h1>
+                <!-- Ctrl + Shift + P && 'etiqueta en la que quiero meter el contenido' -->
+                <nav>
+                    <ul class="navegacion">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contactos.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <form action="">
+                <label for="nombreapellido">Nombre y apellido</label>
+                <input type="text" id="nombreapellido" class="input-padron">
+
+                <label for="correo">Correo Electronico</label>
+                <input type="text" name="" id="correo" class="input-padron">
+
+                <label for="telefono">Telefono</label>
+                <input type="text" name="" id="telefono" class="input-padron">
+
+                <label for="mensaje"></label>
+                <textarea name="" id="mensaje" cols="73" rows="10" class="input-padron"></textarea>
+
+                <div>
+                    <p>¿Cómo le gustaría que lo contactemos?</p>
+
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                    
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono</label>
+
+                    <label for="radio-whasa"><input type="radio" name="contacto" value="whasa" id="radio-whasa">Whatsapp</label>
+                </div>
+
+                <br>
+                <div>
+                    <p>En cual horario prefiere ser atendido</p>
+                    <select name="" id="">
+                        <option value="">Mañana</option>
+                        <option value="">Tarde</option>
+                        <option value="">Noche</option>
+                    </select>
+                </div>
+
+                <label for="" class="checkbox"><input type="checkbox">¿Le gustaría recibir novedades de la Barbería Alura?</label>
+                
+                <input type="submit" name="contacto" value="Enviar formulario">
+            </form>
+        </main>
+
+        <footer>
+            <img src="images/Productos/logo-blanco.png" alt="">
+            <p class="copyright">© Copyright Barbería Alura 2023</p>
+        </footer>
+    </body>
+</html>
