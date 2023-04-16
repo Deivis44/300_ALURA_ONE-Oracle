@@ -20,3 +20,4 @@
      - contactos.html
 
 4. HTML5 y CSS3 parte 4: Avanzado en CSS
+   - **Barbería Alura + *parte 2* + *parte 3* + *parte 4***
